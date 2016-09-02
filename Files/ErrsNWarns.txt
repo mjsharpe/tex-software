@@ -1,0 +1,1 @@
+An AppleScript macro for TeXShop's Macros Menu. Parses the log file and displays only warnings and some errors.

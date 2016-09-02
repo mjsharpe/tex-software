@@ -1,0 +1,1 @@
+The fbb package provides otf and pfb with LaTeX support files for a Bembo-like font based on Cardo, with many modifications. Current version is 1.1. For a lengthy usage example, see the documentation for TeXFontUtility2013 below.

@@ -1,0 +1,1 @@
+Newest (unreleased) version of newtx. Many changes to math. Revised 2016-08-11.

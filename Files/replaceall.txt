@@ -1,0 +1,1 @@
+This is a package of AppleScript macros for the TeXShop Macro Menu. They allow multi-file search and replace, with many options for choices of files and the manner of their handling.

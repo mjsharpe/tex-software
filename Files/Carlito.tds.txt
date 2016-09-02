@@ -1,0 +1,1 @@
+These are the Carlito fonts, version 1.103, Beta1, converted to OpenType from TrueType, with basic LaTeX support in encodings T1 and TS1.

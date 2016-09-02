@@ -1,0 +1,1 @@
+Description of how to install the most recent version of FontForge with all features working. Instructions involve setting up a virtual machine with guest OS Lion, which has smaller memory requirements than Mountain Lion. These instructions are no longer useful---it is much better to simply download a complete binary from http://fuuko.libferris.com/osx/packages/

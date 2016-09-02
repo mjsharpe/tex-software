@@ -1,0 +1,1 @@
+AppleScript Macros Menu item to run all shell commands specified in a .tex file. Useful for post-processing output.

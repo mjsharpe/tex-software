@@ -1,0 +1,1 @@
+Two macros that allow you to move between documents in TeXShop. Unlike the built-in Next/Previous Source Window items, these move only between visible source files.

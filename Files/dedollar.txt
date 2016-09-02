@@ -1,0 +1,1 @@
+Replace $ pairs with \( \) pairs and $$ $$ with \[ \].

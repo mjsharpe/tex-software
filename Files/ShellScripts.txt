@@ -1,0 +1,1 @@
+Some shell scripts I find useful (eg, for installing a LaTeX package, or converting a .ps or .pdf to .icns), with drop-on faces (applications) provided by Automator. Step-by-step instructions are provided for making these with icons drawn in TeX.

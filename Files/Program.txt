@@ -1,0 +1,1 @@
+A replacement for the Program macro for TeXShop. It recognizes more forms of the program command and takes pains to get the font and fontsize correct when used on an empty source file.

@@ -1,0 +1,1 @@
+Allows you to insert sequences (numbers, hex numbers, letters) in your TeX source. Intended for use in connection with the BabyAwk macro.

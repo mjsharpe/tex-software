@@ -1,0 +1,1 @@
+For AppleScript Macros Menu. After you process a document to send to arXiv using pdflatexmk and \listfiles, run this macro to prepare a folder of additional files that must also be sent with the .tex file and to indicate additions you must make to its preamble. Changed 2015-05-05.

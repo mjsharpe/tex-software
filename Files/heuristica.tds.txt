@@ -1,0 +1,1 @@
+Heuristica 1.07, with modified superior letters in all shapes and inferior figures in all shapes. Not yet completely tested, but appears OK except for some superior spacing issues. Bold accented small caps are available, with reworked version of kerning tables.

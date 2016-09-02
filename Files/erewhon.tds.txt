@@ -1,0 +1,1 @@
+Erewhon is based on Heuristica 1.0.1, but with a substantial number of changes and additions, and is intended as the successor to Heuristica. Opentype and Type1 fonts with LaTeX support in several encodings. Version 1.05.

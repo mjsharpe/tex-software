@@ -1,0 +1,1 @@
+Replacements for Will Robertson's New Tabular and New Array macros from his Column Macros package. The originals may not work under Lion/TeXShop 3.06 due to minor problems with variable names, now fixed.

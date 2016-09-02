@@ -1,0 +1,1 @@
+Some notes on working with Apple's Automator from Lion and its successors.

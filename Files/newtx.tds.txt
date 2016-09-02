@@ -1,0 +1,1 @@
+This is a (virtual) update to the txfonts package with, IMO, much improved metrics and package. This works very well as math package to accompany Linux Libertine. Version 1.41.

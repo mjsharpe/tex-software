@@ -1,0 +1,1 @@
+Update to bickham package, adding support for semibold Bickham Script fonts. Now on CTAN.

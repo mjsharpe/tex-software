@@ -1,0 +1,1 @@
+This is for the TeXShop Macros menu. Select text and run the macro to bring up an interface window that runs [g]awk in a hidden shell and returns the output to your document. 

@@ -1,0 +1,1 @@
+A python script to substitute k for i in math mode only, and only when not part of a control sequence. Works only for inline math delimited by $...$ and display math delimited by $$...$$.

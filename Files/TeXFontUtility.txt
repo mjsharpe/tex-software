@@ -1,0 +1,1 @@
+Package of utilities for managing LaTeX fonts within MacTeX. For the moment, use with MacTeX 2012 is impossible due to major changes in its font-handling.

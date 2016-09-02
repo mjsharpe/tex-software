@@ -1,0 +1,1 @@
+This is a replacement for the version of zplr.pfb in texlive 2014 and the initial version of texlive 2015. The older version can be problematic displaying the figure 5 if you checked "Use LCD font smoothing where available" in System preferences/General.

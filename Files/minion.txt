@@ -1,0 +1,1 @@
+Latex support files for a recent version of MinionPro from Adobe Reader. You must have installed PostScript versions using, eg,  cfftot1, with names MinionPro-Regular.pfb, etc.

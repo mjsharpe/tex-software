@@ -1,0 +1,1 @@
+This is the replacement for TeXFontUtility with the 2013 distribution.  (Seems to work well also with TeXLive 2014.) The newest item is an automated installation of minion2newtx, a package that provides a minion option to newtxmath with minion letters (Latin and Greek) and a math italic v quite distinct from Greek \nu. (Revised 2014-12-17.)

@@ -1,0 +1,13 @@
+Macros menu "Experiment With"
+
+The file ExperimentWith.plist may be used to install the Macros Menu item "Experiment With". To install, open TeXShop's Macros->Open Macro Editor, choose "Add Macros From File..." and navigate to ExperimentWith.plist. Press "Open" to Install the macro, whose default trigger is Cntrl-Opt-Cmd-E, which you may change from the Macro Editor.
+
+The macro works as follows:
+
+If the front document is not a tex source file, it will put up a message and quit.
+
+If it is a tex source file, it looks for the current selection, and if it is non-void, copies it to the clipboard.
+
+Click Edit->Experiment...
+
+If selection was non-void, replace contents of Experiment source window with clipboard contents.

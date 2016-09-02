@@ -1,0 +1,1 @@
+A TeXShop Macros Menu macro. It offers help on your installed macros.

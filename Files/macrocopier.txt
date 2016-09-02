@@ -1,0 +1,1 @@
+This package contains a free (GPL) Cocoa program designed to complement TeXShop's Macro Editor by allowing selected macros to be imported from external plists to TeXShop, or exported from TeXShop to plist files. Source code is provided.

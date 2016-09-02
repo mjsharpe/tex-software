@@ -1,0 +1,1 @@
+These work like updmap-sys and updmap, but have advantages spelled out in the documentation file, tl2012.pdf. The goal is to make working with font map files as simple as possible.

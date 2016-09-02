@@ -1,0 +1,1 @@
+This document gathers properties of the text font families available from CTAN and other sources. Samples are provided for those which are free of cost.

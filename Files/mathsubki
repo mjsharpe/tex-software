@@ -1,0 +1,224 @@
+#!/usr/bin/env python
+import sys
+
+# contents of a tex file are in f, known to exist
+if len(sys.argv) < 2:
+    sys.stderr.write("Usage: %s filename" % (argv[0],))
+    sys.exit(1)
+fn=sys.argv[1]
+if len(sys.argv) > 2:
+	gn=sys.argv[2]
+else:
+	gn=''
+	
+mystate=0 #refers to state at beginning of line
+# 0 means normal, looking for %, $ and $$
+# 1 means in verbatim block
+# 2 means within lstlisting block
+bigspc='                                                                        '
+evens=0 # flip-flop for even-odd $
+devens = 0 # for even-odd $$
+vrb='\\verb'
+bgn='\\begin{'
+bgnv='\\begin{verbatim}'
+bgnl='\\begin{lstlisting}'
+nd='\\end{'
+ndv='\\end{verbatim}'
+ndl='\\end{lstlisting}'
+
+def getfirst(s):
+	global evens, devens, mystate
+	n=len(s)
+	if n==0:
+		return s # happens only with an empty (at end)
+	if s[-1:]!=chr(10):
+		s=s+chr(10)
+		n+=1
+	if s[0:1]=='%':
+		return s
+	vlst=[]# content of \verb
+	vpos=[]# position of \verb
+	ss=s
+	ptr=0
+	while vrb in ss[ptr:]:
+		j=ss.find(vrb,ptr)
+		c=ss[j+5:j+6]
+		if c.isalpha():
+			ptr=j+5
+		else:
+			k=ss.find(c,j+6)
+			vlst.append(ss[j+5:k+1])
+			vpos.append(j+5)
+			ss=ss[0:j+6]+bigspc[0:k-j-4]+ss[k+1:]
+			ptr=k+1
+	ptr=0
+	j=-1
+	if bgn in ss:
+		jv=ss.lower().find(bgnv) # verbatim and Verbatim
+		jl=ss.find(bgnl)
+		if jv>-1:
+			j=jv
+		elif jl>-1:
+			j=jl
+	if j>-1:
+		sss=ss[0:j]
+		if j==jv:
+			mystate=1
+		else:
+			mystate=2
+	else:
+		sss=ss
+	pctpos=-1
+	while '%' in sss[ptr:]:
+		k=sss.find('%',ptr)
+		if sss[k-1:k]=='\\':
+			ptr=k+1
+		else:
+			pctpos=k
+			break
+	# pctpos is position of first unescaped % prior to \begin{verbatim} or 
+	# \begin{lstlisting}
+	if pctpos>-1:
+		srchin=sss[0:pctpos]
+		placein=s[0:pctpos]
+		rem=s[pctpos:]
+	elif j>-1:
+		srchin=sss[0:j]
+		placein=s[0:j]
+		rem=s[j:]
+		if j==jv: 
+			mystate=1
+		else:
+			mystate=2
+	else: # no %, no \begin{verbatim}, no begin{lstlisting}
+		srchin=sss 
+		placein=s
+		rem=''
+	# now find positions of all unescaped $ in srchin
+	ptr=0
+	dptr=0
+	dollarpos=[]
+	ddollarpos=[]
+	while '$$' in srchin[dptr:]:
+		k=srchin.find('$$',ptr)
+		if k==0:
+			ddollarpos.append(0)
+			srchin='  '+srchin[2:]
+		else:
+			if not(srchin[k-1:k]=='\\'):
+				ddollarpos.append(k)
+				srchin=srchin[0:k]+'  '+srchin[k+2:]
+		dptr=k+2
+	dm=len(ddollarpos)
+	
+	while '$' in srchin[ptr:]:
+		k=srchin.find('$',ptr)
+		if k==0:
+			dollarpos.append(0)
+		else:
+			if not(srchin[k-1:k]=='\\'):
+				dollarpos.append(k)
+		ptr=k+1
+	m=len(dollarpos)
+	i=evens # 0 or 1
+	s1='$'
+	s2='$'
+	#if evens==1:
+	#	s1,s2 = s2,s1
+	#print dollarpos
+	if dm>0:
+		s3='$$'
+		s4='$$'
+		#if devens==1:
+		#	s3,s4=s4,s3
+		for k in ddollarpos:
+			if devens==1:
+				placein=replacei(placein[0:k])+s3+placein[k+2:]
+			else:
+				placein=placein[0:k]+s3+replacei(placein[k+2:])			
+			#s3,s4=s4,s3
+			devens=1-devens
+			
+	if m==1:
+		if evens==1:
+			placein=s1.join([replacei(placein[:dollarpos[0]]), placein[dollarpos[0]+1:]])
+		else:
+			placein=s1.join([placein[:dollarpos[0]], replacei(placein[dollarpos[0]+1:])])
+		#s1,s2 = s2,s1
+		evens = 1-evens
+	elif m>1:
+		mm=(m-1)/2 # largest integer with 2*mm<=m-1
+		ndxlst=[-1]+[dollarpos[i] for i in range(0,m)]+[len(placein)]
+		if evens==1:
+			fraglstA=[replacei(placein[ndxlst[j]+1:ndxlst[j+1]]) for j in range(0,2*mm+1,2)]
+			fraglstB=[placein[ndxlst[j+1]+1:ndxlst[j+2]] for j in range(0,2*mm+1,2)]
+		else:
+			fraglstA=[placein[ndxlst[j]+1:ndxlst[j+1]] for j in range(0,2*mm+1,2)]
+			fraglstB=[replacei(placein[ndxlst[j+1]+1:ndxlst[j+2]]) for j in range(0,2*mm+1,2)]		
+		print fraglstB
+		fraglst=zip(fraglstA,fraglstB)
+		if m%2==0:fraglst=fraglst+[[placein[ndxlst[-2]+1:]]]
+		placein=s2.join([s1.join(frag) for frag in fraglst])
+		if m%2==1:
+			evens=1-evens
+	return placein+rem
+		
+def replacei(s):
+	# s is a math string
+	# replace all occurrences of i with k, provided i is not part of a control sequence
+	ss=s
+	if 'i' in s:
+		ptr = 0
+		ilst = []
+		while 'i' in s[ptr:]:
+			n = s.find('i',ptr)
+			ptr = n+1
+			if n==0:
+				ilst.append(0)
+			else:
+				if '\\' in s[0:n]:
+					m = s.rfind('\\',0,n)
+					if not(s[m+1:n].isalpha()):
+						ilst.append(n)
+				else:
+					ilst.append(n)
+		if len(ilst)>0:
+			t = list(s)
+			for j in ilst:
+				t[j]='k'
+			ss=''.join(t)
+	return ss						
+
+
+def scanforend(s):
+	global mystate
+	if nd in s:
+		if mystate==1:
+			bigend=ndv
+		else:
+			bigend=ndl
+		k=s.lower().find(bigend)
+		if k>-1:
+			k=k+len(bigend)+1
+			mystate=0
+			return s[0:k]+getfirst(s[k:])
+		else:
+			return s
+	else:
+		return s
+
+if len(gn)==0:
+	fnshort=fn[:-4]
+	gn=fnshort+'-subik.tex'
+f=open(fn,'r')
+g=open(gn,'w')
+
+for line in f:
+	if mystate==0:
+		line=getfirst(line)
+	else:
+		line=scanforend(line)
+	g.write(line)
+f.close
+g.close
+	

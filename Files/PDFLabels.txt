@@ -1,0 +1,1 @@
+A TeXShop Macros menu AppleScript. With the target a file containing labels for a picture or items to import to Keynote, this macro creates labels from the lines in pdf format.

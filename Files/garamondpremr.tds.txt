@@ -1,0 +1,1 @@
+Support files for GaramondPremrPro (regular, semibold and bold weights) in TS1, T1, LY1 encodings. (You must supply the fonts.)

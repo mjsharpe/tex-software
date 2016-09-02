@@ -1,0 +1,1 @@
+FF.app is a compiled AppleScript that can (i) be double-clicked to start FontForge.app; (ii) accept drop font files, opening them in FontForge; (iii) be set to be the default application for .sfd, .otf and .ttf files, opening them in FontForge. It requires installation of MouseTools, free from http://www.hamsoftengineering.com/codeSharing/MouseTools/MouseTools.html

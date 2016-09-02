@@ -1,0 +1,1 @@
+This package helps with construction of a tex document that imports a collection of scanned pages, addressing issues of irregularities in typical scans and setting up the importing document to allow indexing, hyperlinks and the like without too much bother. Version 1.03, 05/01/2014.

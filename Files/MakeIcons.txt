@@ -1,0 +1,1 @@
+An AppleScript macro for the TeXShop Macros menu. This allows creation of an .icns file from a pdf created in TeXShop. Very useful for adding simple icons to shell scripts made into applications with Platypus or Automator. 

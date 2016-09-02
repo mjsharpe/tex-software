@@ -1,0 +1,1 @@
+A fix for TeXShop's macro menu item Insert Reference---now works under Lion/TeXShop 3.0.6.

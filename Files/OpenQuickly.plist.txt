@@ -1,0 +1,1 @@
+Correction to TeXShop "Open Quickly" macro so that TeXShop's 'open file' doesn't produce a timeout error.

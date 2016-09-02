@@ -1,0 +1,1 @@
+A TeXShop Macros menu package to help with management of [La]TeX projects, keeping most details out of sight.

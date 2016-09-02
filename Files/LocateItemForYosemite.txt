@@ -1,0 +1,1 @@
+A version of LocateItem compiled for Yosemite, and working without issues there.

@@ -1,0 +1,1 @@
+A simple file locater using either (a) the Spotlight database; (b) the locate database; (c) Unix 'find' in the TeX forest. Latest revision fixes a preference loading issue and contains new contextual menu options to provide file dates. Not as comprehensive as Find Any File, but very fast.

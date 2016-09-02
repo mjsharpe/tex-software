@@ -1,0 +1,1 @@
+A package that allows an arbitrary superior figures font (used for footnote markers) to be used with an arbitrary font family. Works in LaTeX, LuaLaTeX and XeLaTeX. (Load after other text font packages.)

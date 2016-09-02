@@ -1,0 +1,1 @@
+An AppleScript macro for TeXShop's Macros menu which will run the application "PDF to Keynote" on the current pdf file.

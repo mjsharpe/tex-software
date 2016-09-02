@@ -1,0 +1,1 @@
+This is a TeXShop Macros Menu item that allows you to replicate a block of text in which some designated items are to be incremented or alternated in some manner. It is part of the scanpages package, but may have independent interest. See the documentation in the scanpages package for details.

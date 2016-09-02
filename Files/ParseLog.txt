@@ -1,0 +1,1 @@
+ParseLog is an AppleScript macro for TeXShop's Macros menu. It filters out all but errors and warnings from the log file, showing them in a Terminal window. The hard work is performed by pydflatex, which requires some installation---see the instructions in ParseLog.txt.

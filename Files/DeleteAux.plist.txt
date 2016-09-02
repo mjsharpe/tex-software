@@ -1,0 +1,1 @@
+Version 5/21/2014 of the TeXShop macro based initially on Will Robertson's "Clean Up". Removes auxiliary files created by a number of TeX-related processes. 

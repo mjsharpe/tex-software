@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>ROOT</string>
+	<key>submenu</key>
+	<array>
+		<dict>
+			<key>content</key>
+			<string>--applescript
+--Michael Sharpe, 2015-01-03
+--Copy selected text in .tex source window to an Experiment window.
+--Requires TeXShop 3.37 or higher
+
+tell application "TeXShop"	activate	set win to name of window 1	if (win ends with ".pdf") or (win ends with " console") then		activate
+		display dialog "Tex source window must be front document for Experiment..."		return	end if	set s to (content of selection of document 1)	set slen to (count of s)	--display dialog send telltell application "System Events"	tell application process "TeXShop"		set frontmost to true		if slen &gt; 0 then			key down {command}			keystroke "c"			key up {command}		end if		tell menu "Edit" of menu bar item "Edit" of menu bar 1			click			click menu item "Experiment..."		end tell		if slen &gt; 0 then			delay 0.5			keystroke "a" using {command down}			keystroke "v" using {command down}		end if	end tellend tell--exit with TeXShop frontmost
+
+tell application "TeXShop" to activate </string>
+			<key>key</key>
+			<string>E+OptionKey+ControlKey</string>
+			<key>name</key>
+			<string>Experiment with</string>
+		</dict>
+	</array>
+</dict>
+</plist>

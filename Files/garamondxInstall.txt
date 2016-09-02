@@ -1,0 +1,1 @@
+This is an installer package for garamondx 1.092. Download, expand the zip file, and double click InstallGaramondx to install the package in ~/Library/texmf and enable its map file.

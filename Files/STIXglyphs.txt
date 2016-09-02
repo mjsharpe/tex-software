@@ -1,0 +1,1 @@
+Files illustrating how to use arbitrary glyphs from the STIX collection with LaTeX, in  case you prefer not to use LuaLaTeX or XeLaTeX.

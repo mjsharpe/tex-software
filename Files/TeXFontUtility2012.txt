@@ -1,0 +1,1 @@
+This is the replacement for TeXFontUtility with the 2012 distribution.  The manual does not yet reflect all the changes from the original TeXFontUtility---that is a big job that I have not been willing to tackle. The menu items work the same way, except for Uninstall, which is still a work in progress. 

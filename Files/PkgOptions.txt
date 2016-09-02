@@ -1,0 +1,1 @@
+A macro for TeXShop's Macros Menu that allows you to set the options for a number of font packages without having to study their documentation.

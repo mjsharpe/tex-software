@@ -1,0 +1,1 @@
+Package permits access to all features of the Latin Modern Typewriter fonts (plus scaling) while using any other selection of Roman and Sans Serif fonts. Version 1.00.

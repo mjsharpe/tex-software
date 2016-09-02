@@ -1,0 +1,1 @@
+Test version of mathalfa.sty, fixing problems with documentclass memoir.

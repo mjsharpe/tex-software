@@ -1,0 +1,1 @@
+An addon package for libertine---contains LaTeX support files for libertine Greek and Cyrillic. Requires libertinextras package.

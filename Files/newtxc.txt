@@ -1,0 +1,2 @@
+An addon to newtx that allows use of Adobe Times small caps fonts within newtxtext. Install this tds adding your pfb files, named ptmrc8a.pfb and ptmbc8a.pfb, to fonts/type1/public/newtx and cding to the top level, where the folders fonts and tex are at the top, and run
+/bin/cp -Rfp * ~/Library/texmf

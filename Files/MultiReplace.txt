@@ -1,0 +1,1 @@
+Three different  AppleScript Macros menu items (plus a helper application) to perform search/replace across a .tex file and each \include. They offer different levels of interaction.

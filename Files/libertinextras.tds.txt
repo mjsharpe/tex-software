@@ -1,0 +1,1 @@
+An addon for the libertine package, providing LaTeX support for slanted versions of libertine, and for inferior letters, figures and symbols contained in libertine.

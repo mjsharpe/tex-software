@@ -1,0 +1,1 @@
+An AppleScript for TeXShop's Macros Menu. Searches front document for \bibliography{} items and opens any it finds.

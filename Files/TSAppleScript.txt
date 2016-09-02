@@ -1,0 +1,1 @@
+Information for TeXShop AppleScripters and a Library of TeXShop AppleScript routines you may find useful. Documentation revised 2015-03-06, TSLib updated 2014-01-16.
