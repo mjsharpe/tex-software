@@ -1,1 +1,0 @@
-A replacement for pxfonts with improved metrics and options. This provides yet another alternative for Palatino-like text and math packages. This newest version, 1.22, (2015-03-10) requires newtx 1.23 or higher, as it shares the use of its revised math extension font.
