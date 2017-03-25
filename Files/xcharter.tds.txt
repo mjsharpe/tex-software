@@ -1,1 +1,0 @@
-Version 1.072 of XCharter, an extension of Bitstream Charter.
