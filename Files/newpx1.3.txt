@@ -1,1 +1,0 @@
-Unreleased version of newpx with changes in parallel to those in newtx1.5. Revised 2016-07-16.
