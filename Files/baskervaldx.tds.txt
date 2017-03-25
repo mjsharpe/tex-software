@@ -1,1 +1,0 @@
-BaskervaldADF is a free Baskerville-like text font, and Baskervaldx extends and modifies it to have features that make it usable with [LaTeX]. Adds Small Caps in all styles. Version 1.05, posted 2014-11-27.
