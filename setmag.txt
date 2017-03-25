@@ -1,0 +1,1 @@
+Setmag provideds a means for a TeXShop source file to specify the desired magnification for the pdf. With some additional work, it could also set the position, height and width of the preview. A recent version of TeXShop (3.56 or higher) is required.
