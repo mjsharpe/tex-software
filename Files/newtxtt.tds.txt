@@ -1,1 +1,0 @@
-Version 1.051 of newtxtt, with 5 choices of styles for zero, a choice of quote style, small caps now with oldstyle figures (same 5 choices) and other new options. Version 1.051 fixes a problem in the fd files introduced in version 1.05. (New as of 12/23/2014.)
